@@ -1,2 +1,4 @@
 # shop-apotheke-test
-Automation of API and GUI tests
+npm install
+npx cypress install
+npm run Test
