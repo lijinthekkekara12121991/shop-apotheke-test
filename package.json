@@ -4,7 +4,7 @@
   "description": "Automation of API and GUI tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Test": "npx cypress run --spec 'cypress/e2e/bdd/*.feature' --record --key cee6d240-0251-4e6b-8c7e-05557ef98583 --browser chrome --headless"
   },
   "repository": {
     "type": "git",
@@ -16,12 +16,12 @@
     "url": "https://github.com/lijinthekkekara12121991/shop-apotheke-test/issues"
   },
   "devDependencies": {
-    "cypress": "^6.3.0",
-    "cypress-cucumber-preprocessor": "^4.0.0"
+    "cypress": "12.3.0",
+    "cypress-cucumber-preprocessor": "4.3.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/integration/features/step_definitions/**/"
+    "step_definitions": "cypress/e2e/step_definitions/**/"
   },
   "homepage": "https://github.com/lijinthekkekara12121991/shop-apotheke-test#readme"
 }

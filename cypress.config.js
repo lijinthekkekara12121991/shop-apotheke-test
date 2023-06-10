@@ -1,8 +1,12 @@
+const cucumber = require('cypress-cucumber-preprocessor').default;
+
 module.exports = {
+  projectId: "8x94nr",
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('file:preprocessor', cucumber())
     },
+    specPattern: '**/*.feature',
     env: {
       APP_URL: 'https://www.shop-apotheke.com/',
       API_URL: 'https://api.sa-tech.de/static',
@@ -10,4 +14,5 @@ module.exports = {
       PASSWORD: 'aA1!bB2@cC3#dD4$'
     }
   },
+  parallel: 3
 };
