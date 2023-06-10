@@ -1,11 +1,11 @@
-name: Cypress Tests using Cypress Docker Image
+name: Run the tests in cypress docker image
 
-on: push
+on: workflow_dispatch
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:included:12.3.0
+    container: cypress/included:12.3.0
     steps:
       - name: Checkout
         uses: actions/checkout@v3
