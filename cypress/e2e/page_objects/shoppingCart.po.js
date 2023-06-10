@@ -12,8 +12,8 @@ class ShoppingCart {
         cy.get(`div[data-value="${qty}"]`).click();
     }
 
-    isQtyCorrect() {
-        cy.get('.a-RoundBadge').first().invoke('text').should('eq', '2');
+    isQtyCorrect(qty) {
+        cy.get('.a-RoundBadge').first().invoke('text').should('eq', `${qty}`);
     }
 }
 

@@ -1,6 +1,6 @@
-import { MP } from "./page_objects/mainPage.po";
-import { PD } from "./page_objects/productDetails.po";
-import { SC } from "./page_objects/shoppingCart.po";
+import { MP } from "../page_objects/mainPage.po";
+import { PD } from "../page_objects/productDetails.po";
+import { SC } from "../page_objects/shoppingCart.po";
 
 describe('Add product in Cart', () => {
     beforeEach(() => {
@@ -27,6 +27,6 @@ describe('Add product in Cart', () => {
         SC.visit();
         SC.selectQuantity(2);
         cy.wait(5000);
-        SC.isQtyCorrect();
+        SC.isQtyCorrect(2);
     });
 });
