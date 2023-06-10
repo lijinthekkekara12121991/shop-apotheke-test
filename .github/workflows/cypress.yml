@@ -1,17 +1,17 @@
-name: Cypress Tests using Cypress Docker Image
+name: API and GUI tests
 
-on: push
+on: workflow_dispatch
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:included:12.3.0
+    container: cypress/included:12.3.0
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
-        with:
-          build: npm run build
-          start: npm start
-          browser: chrome
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install the dependencies
+        run: npm install
+
+      - name: Run the tests
+        run: npm run Test
