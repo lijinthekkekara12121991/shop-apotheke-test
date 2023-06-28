@@ -2,7 +2,7 @@ Feature: Product addition
 
 Background: Add the product in the cart
     Given I visit the main page
-    And I search for product "IBUPROFEN"
+    And I search for product "IBUPROFEN AL 400 mg"
     And I add the product to the cart
 
 Scenario: Check if the product is added
